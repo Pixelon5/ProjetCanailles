@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ProjetCanailles"
+    }
+  },
+  "defaultProject": "ProjetCanailles",
+  "cli": {
+    "analytics": "0da51379-2c9c-4ce1-9af4-7e6bf051798c"
+  }
 }
