@@ -1,0 +1,13 @@
+.card-img-top {
+	background-size: cover;
+	background-position: bottom;
+}
+.square {
+	width: 100%;
+	display: inline-block;
+}
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}

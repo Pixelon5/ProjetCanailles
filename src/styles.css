@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+.male {
+	color: cornflowerblue;
+	font-weight: 500;
+}
+
+.femelle {
+	color: hotpink;
+	font-weight: 500;
+}
+.date {
+	font-weight: 500;
+}
