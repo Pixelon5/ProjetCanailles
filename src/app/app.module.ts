@@ -11,6 +11,7 @@ import { CartePorteeComponent } from './components/carte/carte-portee/carte-port
 import { CarteReproducteurComponent } from './components/carte/carte-reproducteur/carte-reproducteur.component';
 import { CarteChiotComponent } from './components/carte/carte-chiot/carte-chiot.component';
 import { ListeCarteComponent } from './components/listes/liste-carte-grille/liste-carte.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ListeCarteComponent } from './components/listes/liste-carte-grille/list
     CartePorteeComponent,
     CarteReproducteurComponent,
     CarteChiotComponent,
-    ListeCarteComponent
+    ListeCarteComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule
