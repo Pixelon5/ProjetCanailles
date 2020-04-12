@@ -1,3 +1,6 @@
+:root {
+  --footer-height: 40px;
+}
 .male {
 	color: cornflowerblue;
 	font-weight: 500;
@@ -10,8 +13,4 @@
 
 .date {
 	font-weight: 500;
-}
-
-.contact {
-	font-weight: 700;
 }

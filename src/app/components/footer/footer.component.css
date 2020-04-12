@@ -1,5 +1,13 @@
 .footer {
-    width: 100%;
-	height: 60px;
-	line-height: 60px;
+  width: 100%;
+	height: var(--footer-height);
+	line-height: var(--footer-height);
+}
+.footer-component {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.footer-title {
+  font-weight: 700;
+  margin-right: 10px;
 }
