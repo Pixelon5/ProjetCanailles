@@ -13,6 +13,7 @@ import { CarteChiotComponent } from './components/carte/carte-chiot/carte-chiot.
 import { ListeCartesCarrousselComponent } from './components/listes/liste-cartes-carroussel/liste-cartes-carroussel.component';
 import { ListeCartesGrilleComponent } from './components/listes/liste-cartes-grille/liste-cartes-grille.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FooterComponent } from './components/footer/footer.component';
     CarteChiotComponent,
     FooterComponent,
     ListeCartesCarrousselComponent,
-    ListeCartesGrilleComponent
+    ListeCartesGrilleComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule

@@ -1,5 +1,6 @@
 :root {
   --footer-height: 40px;
+  --header-height: 4rem;
 }
 .male {
 	color: cornflowerblue;
@@ -13,4 +14,8 @@
 
 .date {
 	font-weight: 500;
+}
+body {
+  background-color: #212529;
+  color: #fff;
 }
