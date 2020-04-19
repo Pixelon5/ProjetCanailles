@@ -7,7 +7,7 @@
             <a href="#" class="a-facebook"><i class="fa fa-facebook"></i></a>
           </li>
           <li>
-            <a href="#" class="a-twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="a-instagram"><i class="fa fa-instagram"></i></a>
           </li>
         </ul>
       </div>
@@ -15,14 +15,15 @@
     <div class="col-lg d-none d-lg-block title">
       Des Boulis de la Bergerie
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-auto">
       <div class="main-menu d-none d-lg-block right-section">
         <nav>
           <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a class="active" href="Menu.html">Portées</a></li>
-            <li><a href="about.html">Mâles</a></li>
-            <li><a href="#">Femelles<i class="ti-angle-down"></i></a></li>
+            <li class="one"><a routerLink="accueil" routerLinkActive="active" (click)="mainMenuUnderline.style.marginLeft = '0'">Accueil</a></li>
+            <li class="two"><a routerLink="portees" routerLinkActive="active" (click)="mainMenuUnderline.style.marginLeft = '25%'">Portées</a></li>
+            <li class="three"><a routerLink="reproducteurs/males" routerLinkActive="active" (click)="mainMenuUnderline.style.marginLeft = '50%'">Mâles</a></li>
+            <li class="four"><a routerLink="reproducteurs/femelles" routerLinkActive="active" (click)="mainMenuUnderline.style.marginLeft = '75%'">Femelles</a></li>
+            <hr #mainMenuUnderline />
           </ul>
         </nav>
       </div>

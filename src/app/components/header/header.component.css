@@ -17,42 +17,57 @@
   margin-inline-end: 0;
   padding-inline-start: 0;
 }
-.header-area .main-menu ul {
+.header-area .main-menu nav {
   text-align: right;
+}
+.header-area .main-menu ul {
+  display: inline-block;
 }
 .header-area .main-menu ul li, .header-area .social-links ul li {
   display: inline-block;
 }
 .header-area .main-menu ul li {
-  margin-left: 45px;
-  text-align: right;
+  text-align: center;
 }
 .header-area .main-menu ul li a {
+  width: 100px;
   color: #fff;
   font-size: 16px;
   font-weight: 400;
+  text-decoration: none;
   display: inline-block;
   padding: 0 0 7px 0;
   font-family: "Paytone One", sans-serif;
   position: relative;
 }
-.header-area .main-menu ul li:first-child a {
-  padding-left: 0;
+ /* ------------ sliding underline ------------ */
+.one:hover ~ hr {
+  margin-left: 0 !important;
 }
-.header-area .main-menu ul li a::before {
-  position: absolute;
-  content: "";
-  background: #1ad61d;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
+
+.two:hover ~ hr {
+  margin-left: 25% !important;
+}
+
+.three:hover ~ hr {
+  margin-left: 50% !important;
+}
+
+.four:hover ~ hr {
+  margin-left: 75% !important;
+}
+
+hr {
+  height: .25rem;
+  width: 25%;
+  margin: 0;
+  background: var(--accent-color);
+  border: none;
+  transition: .2s ease-in-out;
   opacity: 0;
-  transition: 0.3s;
 }
-.header-area .main-menu ul li a.active::before {
-  opacity: 1;
-}
+
+/* ================ SOCIAL LINKS ================ */
 .header-area .social-links ul li {
   margin-right: 10px;
   font-size: 1.3rem;
@@ -77,12 +92,14 @@
 .header-area .social-links ul li .a-facebook:hover {
   background-color: #1e66e2;
 }
-.fa-twitter {
-  color: #41b1f5;
+.fa-instagram {
+  color: #c636ac;
 }
-.header-area .social-links ul li .a-twitter:hover {
-  background-color: #20a3f3;
+.header-area .social-links ul li .a-instagram:hover {
+  background-color: #ab1f91;
 }
+
+/* ================ TITLE ================ */
 @font-face {
   font-family: creamCake;
   src: url('src/assets/font/Cream Cake.ttf');

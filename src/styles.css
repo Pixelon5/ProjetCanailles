@@ -1,6 +1,8 @@
 :root {
   --footer-height: 40px;
   --header-height: 4rem;
+  --accent-color: #5aef5a;
+  --darken-accent-color: #54c154;
 }
 .male {
 	color: cornflowerblue;
