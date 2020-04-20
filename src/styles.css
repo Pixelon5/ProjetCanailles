@@ -21,3 +21,6 @@ body {
   background-color: #212529;
   color: #fff;
 }
+.big-p {
+  padding: 1rem 3rem;
+}
