@@ -19,5 +19,4 @@ export class HeaderComponent implements OnInit {
       this.mainMenuUnderline.nativeElement.style.marginLeft = (Array.from(ul.children).indexOf(liActive) * 25).toString() + '%';
     });
   }
->>>>>>> branch 'dev' of https://github.com/Pixelon5/ProjetCanailles.git
 }
