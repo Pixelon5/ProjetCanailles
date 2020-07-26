@@ -14,6 +14,14 @@ import { ListeCartesCarrousselComponent } from './components/listes/liste-cartes
 import { ListeCartesGrilleComponent } from './components/listes/liste-cartes-grille/liste-cartes-grille.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import {RouterModule, Routes} from '@angular/router';
+
+const routes: Routes = [
+  {path: '', component: AccueilComponent},
+  {path: 'accueil', component: AccueilComponent},
+  {path: 'portees', component: PorteesComponent},
+  {path: 'reproducteurs/:genre', component: ReproducteursComponent},
+];
 
 @NgModule({
   declarations: [
@@ -32,7 +40,8 @@ import { HeaderComponent } from './components/header/header.component';
     HeaderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

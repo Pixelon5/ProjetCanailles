@@ -1,5 +1,19 @@
 .footer {
-    width: 100%;
-	height: 60px;
-	line-height: 60px;
+  width: 100%;
+	height: var(--footer-height);
+	line-height: var(--footer-height);
+}
+.footer-component {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.footer-title {
+   font-weight: 700;
+   margin-right: 10px;
+ }
+.footer-component i {
+  margin-right: 10px;
+  font-size: 1.4rem;
+  line-height: var(--footer-height);
+  vertical-align: bottom;
 }

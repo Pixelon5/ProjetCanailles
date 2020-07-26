@@ -11,7 +11,7 @@ export class ListeCartesCarrousselComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    const flkty = new Flickity( '.my-slider', {
+    const flkty = new Flickity( '#slider-portee', {
       cellAlign: 'left',
     });
   }

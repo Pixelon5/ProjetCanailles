@@ -1,29 +1,36 @@
-<header class="header bg-dark text-light">
-    <div class="row m-0 justify-content-center">
-		<div class="container">
-			<div class="navbar-header">
-			<h1 class="brand brand-name navbar-left">Des Canailles de la Bergerie</h1>
-			</div>
-			
-			<div class="collapse navbar-collapse navbar-right" id="myNavbar">
-
-				<div class="col-auto">
-					<a href="#Accueil">Accueil</a>
-				</div>
-				<div class="col-auto">
-					<a href="#Portées">Portées</a>
-				</div>
-				<div class="col-auto">
-					<a href="#Femelles">Femelles</a>
-				</div>
-				<div class="col-auto">
-					<a href="#Mâles">Mâles</a>
-				</div>
-				<div class="col-auto">
-					<a href="#Facebook">Facebook</a>
-				</div>
-
-			</div>
-		</div>
+<div class="header-area p-0 container">
+  <div class="row align-items-center m-0">
+    <div class="col-lg-auto d-none d-lg-block left-section">
+      <div class="social-links">
+        <ul>
+          <li>
+            <a href="#" class="a-facebook"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#" class="a-instagram"><i class="fa fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
     </div>
-</header>
+    <div class="col-lg d-none d-lg-block title">
+      Des Boulis de la Bergerie
+    </div>
+    <div class="col-lg-auto">
+      <div class="main-menu d-none d-lg-block right-section">
+        <nav>
+          <ul>
+            <li class="one"><a routerLink="accueil" routerLinkActive="active" (click)="mainMenuUnderline.style.marginLeft = '0'">Accueil</a></li>
+            <li class="two"><a routerLink="portees" routerLinkActive="active" (click)="mainMenuUnderline.style.marginLeft = '25%'">Portées</a></li>
+            <li class="three"><a routerLink="reproducteurs/males" routerLinkActive="active" (click)="mainMenuUnderline.style.marginLeft = '50%'">Mâles</a></li>
+            <li class="four"><a routerLink="reproducteurs/femelles" routerLinkActive="active" (click)="mainMenuUnderline.style.marginLeft = '75%'">Femelles</a></li>
+            <hr #mainMenuUnderline />
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="mobile_menu d-block d-lg-none"></div>
+    </div>
+  </div>
+</div>
+>>>>>>> branch 'dev' of https://github.com/Pixelon5/ProjetCanailles.git
