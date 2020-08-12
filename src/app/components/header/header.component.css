@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Bubblegum+Sans|Caveat+Brush|Chewy|Lobster+Two');
+.footer {
+    width: 100%;
+	height: 60px;
+	line-height: 60px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== NAVIGATION ======*/
+.navbar {
+    border: 0;
+    z-index: 9999;
+    letter-spacing: 4px;
+
+}
+.logo {
+    display: block;
+    height: auto;
+    width: 52px;
+    padding-top: 5px;
+    margin-right: 15px;
+}
+
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px; /* firefox bug fix */
+  width: auto;
+}
+.navbar .nav > li > a {
+  line-height: 50px;
+}
+
+.navbar-header h1 {
+    letter-spacing: 1px;
+    color: black !important;
+    font-family: 'Lobster Two', cursive;
+}
+
+.navbar li a, .navbar {
+    color: black !important;
+    font-size: 12px;
+    transition: all 0.6s 0s;
+}
+
+.navbar-toggle {
+    background-color: transparent !important;
+    border: 0;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: red !important;
+}
+
+.header-area {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  top: 0;
+  z-index: 9;
+  color: #fff;
+}
+.header-area li {
+  list-style: none;
+}
+.header-area ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+.header-area .main-menu nav {
+  text-align: right;
+}
+.header-area .main-menu ul {
+  display: inline-block;
+}
+.header-area .main-menu ul li, .header-area .social-links ul li {
+  display: inline-block;
+}
+.header-area .main-menu ul li {
+  text-align: center;
+}
+.header-area .main-menu ul li a {
+  width: 100px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 0 7px 0;
+  font-family: "Paytone One", sans-serif;
+  position: relative;
+}
+ /* ------------ sliding underline ------------ */
+.one:hover ~ hr {
+  margin-left: 0 !important;
+}
+
+.two:hover ~ hr {
+  margin-left: 25% !important;
+}
+
+.three:hover ~ hr {
+  margin-left: 50% !important;
+}
+
+.four:hover ~ hr {
+  margin-left: 75% !important;
+}
+
+hr {
+  height: .25rem;
+  width: 25%;
+  margin: 0;
+  background: var(--accent-color);
+  border: none;
+  transition: .2s ease-in-out;
+  opacity: 0;
+}
+
+/* ================ SOCIAL LINKS ================ */
+.header-area .social-links ul li {
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+.header-area .social-links ul li a {
+  --social-link-size: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  transition: 0.3s;
+  width: var(--social-link-size);
+  height: var(--social-link-size);
+  line-height: var(--social-link-size);
+  text-align: center;
+}
+.header-area .social-links ul li a:hover i {
+  color: white;
+  transition: 0.3s;
+}
+.fa-facebook {
+  color: #3379f1;
+}
+.header-area .social-links ul li .a-facebook:hover {
+  background-color: #1e66e2;
+}
+.fa-instagram {
+  color: #c636ac;
+}
+.header-area .social-links ul li .a-instagram:hover {
+  background-color: #ab1f91;
+}
+
+/* ================ TITLE ================ */
+@font-face {
+  font-family: creamCake;
+  src: url('src/assets/font/Cream Cake.ttf');
+}
+.title {
+  font-family: creamCake, serif;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  padding-left: 2rem;
+}

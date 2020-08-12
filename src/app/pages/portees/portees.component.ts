@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PorteesService } from '../../services/portees-service.service';
+import { Portee } from '../../models/portee.model';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-portees',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PorteesComponent implements OnInit {
 
-  constructor() { }
+  portees: Portee[] = [];
+  porteeSubscription: Subscription;
 
-  ngOnInit(): void {
+  constructor(private porteeService: PorteesService) { }
+
+  ngOnInit() {
+    this.porteeService.getPortees().subscribe(dbPortees => {
+      this.portees = dbPortees;
+    });
   }
 
 }
