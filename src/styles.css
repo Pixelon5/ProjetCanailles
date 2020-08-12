@@ -24,3 +24,15 @@ body {
 .big-p {
   padding: 1rem 3rem;
 }
+a.fancy-link {
+    display: inline-block;
+    color: inherit !important;
+    text-decoration: none;
+}
+.grow {
+  transition: all .1s ease-out;
+  transform: scale(0.95);
+}
+.grow:hover {
+  transform: scaleX(1);
+}
