@@ -54,7 +54,7 @@ const routes: Routes = [
     ListeCartesGrilleComponent,
     HeaderComponent,
     ModelsComponent,
-    //Chiot.Model.TsComponent
+    // Chiot.Model.TsComponent
   ],
   imports: [
     BrowserModule,
