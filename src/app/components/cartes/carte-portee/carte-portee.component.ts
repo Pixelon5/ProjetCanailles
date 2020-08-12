@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Portee } from 'src/app/models/portee.model';
 
 @Component({
   selector: 'app-carte-portee',
@@ -7,11 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CartePorteeComponent implements OnInit {
 
-  @Input() srcImg: string;
+  @Input() portee: Portee;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.portee);
   }
 
 }
