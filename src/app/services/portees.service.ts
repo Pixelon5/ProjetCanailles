@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Portee } from '../models/portee.model';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { Portee } from '../shared/models/portee.model';
+import {AngularFirestore, DocumentChangeAction} from '@angular/fire/firestore';
+import {map, mergeMap, switchMap} from 'rxjs/operators';
+import {combineLatest, Observable} from 'rxjs';
+import {Chiot} from '../shared/models/chiot.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,14 +17,15 @@ export class PorteesService {
   portee: Portee[] = [];
 
    // recuperer la liste des portees depuis le serveur
-  getPortees(): Observable<Portee[]> {
+  getPortees(): Observable<any[]> {
     return this.firestore.collection('portee').valueChanges().pipe(
-      map(portees => {
-        return portees.map(p => {
-          return new Portee().deserialize(p);
-        })
-      })
-    );
+      mergeMap( (portees: Portee[]) => {
+        return portees.map(portee => {
+          return portee.chiots.map(chiot => {
+            this.firestore.doc(`chiots/${chiot}`).valueChanges();
+          });
+        });
+      }));
   }
 
   // recuperer une seule portee avec son id

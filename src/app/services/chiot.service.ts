@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { Chiot } from '../models/chiot.model';
+import { Chiot } from '../shared/models/chiot.model';
 import DataSnapShot  = firebase.database.DataSnapshot;
 import * as firebase from 'firebase';
 

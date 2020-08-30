@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import * as Flickity from 'flickity';
-import { Portee } from 'src/app/models/portee.model'
+import { Portee } from 'src/app/shared/models/portee.model';
 
 @Component({
   selector: 'app-liste-cartes-carroussel',
@@ -14,10 +13,6 @@ export class ListeCartesCarrousselComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    const flkty = new Flickity( '#slider-portee', {
-      cellAlign: 'left',
-    });
-    console.log(this.portees);
   }
 
 }

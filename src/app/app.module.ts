@@ -22,10 +22,10 @@ import { ListeCartesGrilleComponent } from './components/listes/liste-cartes-gri
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule, Routes } from '@angular/router';
-import { ModelsComponent } from './models/models.component';
-import { PorteesService } from './services/portees-service.service';
-import { ChiotService } from './services/chiot-service.service';
+import { PorteesService } from './services/portees.service';
+import { ChiotService } from './services/chiot.service';
 import { environment } from 'src/environments/environment';
+import {CarouselModule} from 'ngx-bootstrap/carousel';
 
 
 
@@ -52,9 +52,7 @@ const routes: Routes = [
     FooterComponent,
     ListeCartesCarrousselComponent,
     ListeCartesGrilleComponent,
-    HeaderComponent,
-    ModelsComponent,
-    // Chiot.Model.TsComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -67,6 +65,7 @@ const routes: Routes = [
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireStorageModule,
+    CarouselModule.forRoot()
   ],
   providers: [ChiotService, PorteesService],
   bootstrap: [AppComponent]

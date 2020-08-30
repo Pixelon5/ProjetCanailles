@@ -1,4 +1,7 @@
-<div id="slider-portee">
-  <app-carte-portee *ngFor="let portee of portees" [portee]="portee"></app-carte-portee>
-<!--   <app-carte-portee [srcImg]= "gs:porteeChip.jpg"></app-carte-portee>-->
-</div>
+<carousel [itemsPerSlide]="3"
+          [singleSlideOffset]="false"
+          [interval]="false">
+  <slide *ngFor="let portee of portees">
+    <app-carte-portee [portee]="portee"></app-carte-portee>
+  </slide>
+</carousel>

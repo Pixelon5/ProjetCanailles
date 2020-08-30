@@ -1,4 +1,5 @@
 import { Deserializable } from './Deserializable';
+import {Chiot} from './chiot.model';
 
 export class Portee implements Deserializable {
     id: string;
@@ -8,6 +9,7 @@ export class Portee implements Deserializable {
     pere: string;
     mere: string;
     race: string;
+    chiots: Chiot[];
 
     getDateNaissanceString(): string {
         return this.dateNaissance.toLocaleDateString('fr');

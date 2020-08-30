@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PorteesService } from '../../services/portees-service.service';
-import { Portee } from '../../models/portee.model';
+import { PorteesService } from '../../services/portees.service';
+import { Portee } from '../../shared/models/portee.model';
 import { Subscription } from 'rxjs';
 
 @Component({

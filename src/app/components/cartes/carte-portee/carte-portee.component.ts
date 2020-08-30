@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Portee } from 'src/app/models/portee.model';
+import { Portee } from 'src/app/shared/models/portee.model';
 
 @Component({
   selector: 'app-carte-portee',
