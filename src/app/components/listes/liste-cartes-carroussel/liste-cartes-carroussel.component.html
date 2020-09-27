@@ -1,6 +1,6 @@
 <carousel [itemsPerSlide]="3"
           [singleSlideOffset]="false"
-          [interval]="false">
+          [interval]="0">
   <slide *ngFor="let portee of portees">
     <app-carte-portee [portee]="portee"></app-carte-portee>
   </slide>

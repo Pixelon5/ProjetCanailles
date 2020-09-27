@@ -13,6 +13,7 @@ export class ListeCartesCarrousselComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.portees);
   }
 
 }

@@ -1,16 +1,22 @@
 :root {
   --footer-height: 40px;
   --header-height: 4rem;
-  --accent-color: #5aef5a;
-  --darken-accent-color: #54c154;
+  --accent-color: #dc282e;
+  --blue-color: #3379f1;
+  --blue-dark-color: #1e66e2;
+  --blue-light-color: #629aff;
+  --pink-color: #c636ac;
+  --pink-dark-color: #ab1f91;
+  --pink-light-color: #fb59dd;
+
 }
 .male {
-	color: cornflowerblue;
+	color: var(--blue-light-color);
 	font-weight: 500;
 }
 
 .femelle {
-	color: hotpink;
+	color: var(--pink-light-color);
 	font-weight: 500;
 }
 

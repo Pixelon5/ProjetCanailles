@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
 })
 export class PorteesComponent implements OnInit {
 
-  portees: Portee[] = [];
+  portees: Portee[];
   porteeSubscription: Subscription;
 
   constructor(private porteeService: PorteesService) { }

@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Portee } from 'src/app/shared/models/portee.model';
+import {Component, Input, OnInit} from '@angular/core';
+import {Portee} from 'src/app/shared/models/portee.model';
+import {Genre} from '../../../shared/models/enums';
 
 @Component({
   selector: 'app-carte-portee',
@@ -13,7 +14,16 @@ export class CartePorteeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.portee);
+  }
+
+  getNbMales(): string {
+    const nbMales = this.portee.getNbGenre(Genre.MALE);
+    return nbMales ? nbMales + ' mâle' + (nbMales > 1 ? 's' : '') : '';
+  }
+
+  getNbFemelles(): string {
+    const nbFemelles = this.portee.getNbGenre(Genre.FEMELLE);
+    return nbFemelles ? nbFemelles + ' femelle' + (nbFemelles > 1 ? 's' : '') : '';
   }
 
 }

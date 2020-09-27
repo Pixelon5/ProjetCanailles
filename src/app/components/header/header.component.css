@@ -149,16 +149,16 @@ hr {
   transition: 0.3s;
 }
 .fa-facebook {
-  color: #3379f1;
+  color: var(--blue-color);
 }
 .header-area .social-links ul li .a-facebook:hover {
-  background-color: #1e66e2;
+  background-color: var(--blue-dark-color);
 }
 .fa-instagram {
-  color: #c636ac;
+  color: var(--pink-color);
 }
 .header-area .social-links ul li .a-instagram:hover {
-  background-color: #ab1f91;
+  background-color: var(--pink-dark-color);
 }
 
 /* ================ TITLE ================ */

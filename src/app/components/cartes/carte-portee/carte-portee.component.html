@@ -1,6 +1,6 @@
 <app-carte [srcImg]="'assets/img/placeholder-portrait-chien.jpg'">
 	<h5 class="card-text">{{ portee.nom }}</h5>
-<div>Bouledogues français nés le <span class="date">{{ portee.getDateNaissanceString() }}</span></div>
-	<div>Disponible : 
-		<span class="male">2 mâles</span> - <span class="femelle">3 femelles</span> à partir du <span class="date">18/02/2020</span></div>
+<div>{{ portee.race }} nés le <span class="date">{{ portee.getDateNaissanceString() }}</span></div>
+	<div>Disponible :
+		<span class="male">{{ getNbMales() }}</span><span *ngIf="getNbFemelles()"> - <span class="femelle">{{ getNbFemelles() }}</span></span> à partir du <span class="date">18/02/2020</span></div>
 </app-carte>
