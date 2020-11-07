@@ -20,6 +20,18 @@ export class Portee implements Deserializable {
       return this.chiots ? this.chiots.filter(c => c.genre === genre).length : 0;
     }
 
+    getDateDisponible(): Date {
+      return new Date(this.chiots
+      .map(chiot => chiot.dateDisponible)
+      .reduce((minDate: Date, currentDate: Date) => {
+        return currentDate < minDate ? currentDate : minDate;
+      }));
+    }
+
+    getDateDisponibleString(): string {
+      return this.getDateDisponible().toLocaleDateString('fr');
+    }
+
     deserialize(input: any): Portee {
         Object.assign(this, input);
         this.dateNaissance = new Date(input.dateNaissance);
