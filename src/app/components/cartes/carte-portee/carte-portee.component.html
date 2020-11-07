@@ -6,6 +6,6 @@
 		<span *ngIf="getNbMales()"><span class="male">{{ getNbMales() }}</span></span>
 		<span *ngIf="getNbMales() !== '' && getNbFemelles() !== ''"> - </span>
 		<span *ngIf="getNbFemelles()"><span class="femelle">{{ getNbFemelles() }}</span></span>
-		 à partir du <span class="date">18/02/2020</span>
+		 à partir du <span class="date">{{ portee.getDateDisponibleString() }}</span>
 	</div>
 </app-carte>
