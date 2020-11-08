@@ -17,8 +17,8 @@ import { CarteComponent } from './components/cartes/carte.component';
 import { CartePorteeComponent } from './components/cartes/carte-portee/carte-portee.component';
 import { CarteReproducteurComponent } from './components/cartes/carte-reproducteur/carte-reproducteur.component';
 import { CarteChiotComponent } from './components/cartes/carte-chiot/carte-chiot.component';
-import { ListeCartesCarrousselComponent } from './components/listes/liste-cartes-carroussel/liste-cartes-carroussel.component';
-import { ListeCartesGrilleComponent } from './components/listes/liste-cartes-grille/liste-cartes-grille.component';
+import { ListeCartesPorteesComponent } from './components/listes/liste-cartes-portees/liste-cartes-portees.component';
+import { ListeCartesReproducteursComponent } from './components/listes/liste-cartes-reproducteurs/liste-cartes-reproducteurs.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule, Routes } from '@angular/router';
@@ -50,8 +50,8 @@ const routes: Routes = [
     CarteReproducteurComponent,
     CarteChiotComponent,
     FooterComponent,
-    ListeCartesCarrousselComponent,
-    ListeCartesGrilleComponent,
+    ListeCartesPorteesComponent,
+    ListeCartesReproducteursComponent,
     HeaderComponent
   ],
   imports: [
