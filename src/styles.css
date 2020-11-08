@@ -42,3 +42,7 @@ a.fancy-link {
 .grow:hover {
   transform: scaleX(1);
 }
+
+.carousel-item {
+    margin-right: 0;
+}
