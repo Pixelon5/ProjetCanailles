@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Portee } from '../shared/models/portee.model';
-import {AngularFirestore, DocumentChangeAction} from '@angular/fire/firestore';
-import {combineAll, map, mergeMap, switchMap} from 'rxjs/operators';
-import {combineLatest, Observable} from 'rxjs';
-import {Chiot} from '../shared/models/chiot.model';
+import {AngularFirestore} from '@angular/fire/firestore';
+import {map} from 'rxjs/operators';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

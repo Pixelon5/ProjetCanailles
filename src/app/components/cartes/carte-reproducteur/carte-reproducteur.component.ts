@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {Reproducteur} from '../../../shared/models/reproducteur.model';
 
 @Component({
   selector: 'app-carte-reproducteur',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CarteReproducteurComponent implements OnInit {
 
-  @Input() srcImg: string;
+  @Input() reproducteur: Reproducteur;
 
   constructor() { }
 
