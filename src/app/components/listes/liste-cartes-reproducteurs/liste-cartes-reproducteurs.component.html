@@ -1,3 +1,7 @@
 <div id="content" class="row" role="main">
+  <div *ngIf="!reproducteurs.length" class="col-12 text-center p-4 h5">
+    <i class="fas fa-frown mr-1"></i>
+    Aucun chien à afficher.
+  </div>
 	<app-carte-reproducteur *ngFor="let reproducteur of reproducteurs" [reproducteur]="reproducteur" class="col-xs-12 col-md-6 col-xl-4 my-3"></app-carte-reproducteur>
 </div>
