@@ -1,7 +1,7 @@
 <div id="content" class="row" role="main">
-  <lu class="col-xs-12 col-md-6 col-xl-4 my-3"
+  <div class="col-xs-12 col-md-6 col-xl-4 my-3"
     *ngFor="let portee of portees ; let i = index"
     (click)="onViewPortee(i)">
       <app-carte-portee [portee]="portee"></app-carte-portee>
-  </lu>
+  </div>
 </div>
