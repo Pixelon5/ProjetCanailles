@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Chiot } from 'src/app/shared/models/chiot.model';
 
 @Component({
   selector: 'app-carte-chiot',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CarteChiotComponent implements OnInit {
 
-  @Input() srcImg: string;
+  @Input() chiot: Chiot;
 
   constructor() { }
 

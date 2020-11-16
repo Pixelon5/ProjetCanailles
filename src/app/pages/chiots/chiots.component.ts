@@ -1,8 +1,13 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ChiotService } from '../../services/chiot.service';
+import { PorteesService } from '../../services/portees.service';
 import { Chiot } from '../../shared/models/chiot.model';
-import { Subscription } from 'rxjs';
-import { Router } from '@angular/router';
+import { Portee } from 'src/app/shared/models/portee.model';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription, Observable } from 'rxjs';
+
+
+import {AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 
 
 @Component({
@@ -10,36 +15,38 @@ import { Router } from '@angular/router';
   templateUrl: './chiots.component.html',
   styleUrls: ['./chiots.component.css']
 })
-export class ChiotsComponent implements OnInit, OnDestroy {
+export class ChiotsComponent implements OnInit {
 
+  portee: Portee;
+  porteeNom: string;
   chiot: Chiot[];
-  chiotSubscription: Subscription;
+  porteeSubscription: Subscription;
 
-  constructor(private chiotService: ChiotService, private router: Router) { }
+  arrayOfValues: Array<string>;
+
+
+
+  firestore: AngularFirestore;
+  itemDoc: AngularFirestoreDocument<Portee>;
+  item: Observable<Portee>;
+
+  constructor(private route: ActivatedRoute, private chiotService: ChiotService,
+              private router: Router, private porteesService: PorteesService) {}
 
   ngOnInit() {
-    this.chiotSubscription = this.chiotService.chiotSubject.subscribe(
-      (chiot: Chiot[]) => {
-        this.chiot = chiot;
-      }
-    );
-    this.chiotService.emitChiot();
+    const id = this.route.snapshot.params['id'];
+
+    this.porteesService.getPortees().subscribe(dbPortees => {
+      this.portee = dbPortees[id];
+      this.chiot = this.portee.getChiots();
+      this.porteeNom = this.portee.getNom();
+    });
+
   }
 
-  onNewChiot(){
-    this.router.navigate(['/chiot', 'new']);
+  onBack() {
+    this.router.navigate(['/portees']);
   }
 
-  onDeleteChiot(chiot: Chiot) {
-    this.chiotService.removeChiot(chiot);
-  }
-
-  onViewChiot(id: number){
-    this.router.navigate(['/chiot', 'view', id]);
-  }
-
-  ngOnDestroy(){
-    this.chiotSubscription.unsubscribe();
-  }
 
 }

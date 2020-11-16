@@ -10,4 +10,5 @@ export class Chien implements Deserializable {
     Object.assign(this, input);
     return this;
   }
+
 }

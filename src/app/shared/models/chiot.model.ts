@@ -10,4 +10,5 @@ export class Chiot extends Chien {
       this.dateDisponible = new Date(this.dateDisponible);
       return this;
     }
+
 }
