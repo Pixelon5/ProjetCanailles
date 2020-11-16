@@ -37,4 +37,12 @@ export class Portee implements Deserializable {
         this.dateNaissance = new Date(input.dateNaissance);
         return this;
     }
+
+    getChiots(){
+      return this.chiots;
+    }
+
+    getNom(){
+      return this.nom;
+    }
 }
