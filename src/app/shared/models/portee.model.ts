@@ -5,7 +5,7 @@ import {Genre} from './enums';
 export class Portee implements Deserializable {
     id: string;
     nom: string;
-    photo: string;
+    image: string;
     dateNaissance: Date;
     pere: string;
     mere: string;
@@ -38,11 +38,11 @@ export class Portee implements Deserializable {
         return this;
     }
 
-    getChiots(){
-      return this.chiots;
-    }
-
     getNom(){
       return this.nom;
+    }
+
+    getChiots(){
+      return this.chiots;
     }
 }
