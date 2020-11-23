@@ -27,6 +27,8 @@ import { ChiotService } from './services/chiot.service';
 import { environment } from 'src/environments/environment';
 import {CarouselModule} from 'ngx-bootstrap/carousel';
 import { ListeCartesChiotsComponent } from './components/listes/liste-cartes-chiots/liste-cartes-chiots.component';
+import { PorteeFormComponent } from './form/portee-form/portee-form.component';
+import { ChiotFormComponent } from './form/chiot-form/chiot-form.component';
 
 
 
@@ -35,7 +37,8 @@ const routes: Routes = [
   {path: 'accueil', component: AccueilComponent},
   {path: 'portees', component: PorteesComponent},
   {path: 'reproducteurs/:genre', component: ReproducteursComponent},
-  {path: 'portees/view/:id', component: ChiotsComponent }
+  {path: 'portees/view/:id', component: ChiotsComponent },
+  {path: 'portees/new', component: PorteeFormComponent }
 ];
 
 
@@ -55,7 +58,9 @@ const routes: Routes = [
     ListeCartesPorteesComponent,
     ListeCartesReproducteursComponent,
     HeaderComponent,
-    ListeCartesChiotsComponent
+    ListeCartesChiotsComponent,
+    PorteeFormComponent,
+    ChiotFormComponent
   ],
   imports: [
     BrowserModule,

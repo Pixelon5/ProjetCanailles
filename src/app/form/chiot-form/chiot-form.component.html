@@ -1,0 +1,43 @@
+
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <form [formGroup]="chiotForm" (ngSubmit)="onSaveChiot()">
+        <div class="form-group">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom"
+            class="form-control" formControlName="nom">
+        </div>
+        <div class="form-group">
+          <label for="race">Genre</label>
+          <select id="genre" class="form-control" formControlName="genre">
+            <option selected>Femelle</option>
+            <option>Mâle</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="dateDisponible">Date de disponibilité</label>
+          <input type="date" id="dateDisponible" class="form-control"
+            formControlName="dateDisponible" value=getDateDispo()>
+          </div>
+          <div class="form-group">
+            <label for="prixVente">Prix de vente</label>
+            <input type="number" id="prixVente"
+              class="form-control" formControlName="prixVente">
+          </div>
+          <div class="form-group">
+            <label for="robe">Robe</label>
+            <input type="text" id="robe"
+            class="form-control" formControlName="robe">
+          </div>
+          <div class="form-group">
+            <label for="photo">Ajouter une photo</label>
+            <input type="file" (change)="detectFilesChiot($event)"
+            class="form-control" accept="image/*">
+            <p class="text-success" *ngIf="fileChiotUploaded">Fichier chargé !</p>
+          </div>
+          <button class="btn btn-info" [disabled]="chiotForm.invalid || fileChiotIsUploading"
+            type="submit">Valider
+          </button>
+        </form>
+      </div>
+    </div>
