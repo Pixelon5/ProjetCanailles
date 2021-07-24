@@ -17,11 +17,7 @@ export class PorteeFormComponent implements OnInit {
   fileIsUploading = false;
   fileUrl: string;
   fileUploaded = false;
-
-  chiotForm: FormGroup;
-  fileChiotIsUploading = false;
-  fileChiotUrl: string;
-  fileChiotUploaded = false;
+  fileUploadResult: string;
 
   chiots: Chiot[] = [];
   nbChiot: number = 0;
@@ -36,12 +32,12 @@ export class PorteeFormComponent implements OnInit {
   initForm() {
     this.porteeForm = this.formBuilder.group({
       nom: ['', Validators.required],
-      race:'',
-      dateNaissance: "",
-      pere:'',
-      mere:'',
-      image:'',
-      chiots:this.formBuilder.array([])
+      race: '',
+      dateNaissance: '',
+      pere: '',
+      mere: '',
+      image: '',
+      chiots: this.formBuilder.array([])
     });
   }
 
@@ -54,12 +50,12 @@ export class PorteeFormComponent implements OnInit {
     newPortee.pere = this.porteeForm.get('pere').value;
     newPortee.mere = this.porteeForm.get('mere').value;
 
-    if( this.fileUploaded ) {
+    if ( this.fileUploaded ) {
       newPortee.image = this.fileUrl;
     }
 
     if ( !this.fileUploaded && !this.fileIsUploading ){
-      newPortee.image = "https://firebasestorage.googleapis.com/v0/b/projetcanailles.appspot.com/o/portees%2FimageDeBase.png?alt=media&token=0bdbd20a-5520-4476-9860-5ec7b090db9f";
+      newPortee.image = 'https://firebasestorage.googleapis.com/v0/b/projetcanailles.appspot.com/o/portees%2FimageDeBase.png?alt=media&token=0bdbd20a-5520-4476-9860-5ec7b090db9f';
     }
 
     newPortee.chiots = this.chiots;
@@ -77,14 +73,17 @@ export class PorteeFormComponent implements OnInit {
   }
 
   onUploadFile(file: File) {
-  this.fileIsUploading = true;
-    this.porteesService.uploadFile(file).then(
-      (url: string) => {
+    this.fileIsUploading = true;
+    console.log('coucou');
+    this.porteesService.uploadFile(file).then((url: string) => {
         this.fileUrl = url;
-        this.fileIsUploading = false;
         this.fileUploaded = true;
-      }
-    );
+        this.fileUploadResult = 'Fichier téléchargé.';
+      }).catch(() => {
+        console.log('coucou 2');
+        this.fileUploaded = false;
+        this.fileUploadResult = 'Erreur de téléchargement.';
+    }).finally(() => this.fileIsUploading = false);
   }
 
   detectFiles(event) {

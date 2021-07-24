@@ -46,3 +46,8 @@ a.fancy-link {
 .carousel-item {
     margin-right: 0;
 }
+
+h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}

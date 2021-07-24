@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Portee } from '../shared/models/portee.model';
 import { Chiot } from '../shared/models/chiot.model';
 import { AngularFirestore, DocumentChangeAction } from '@angular/fire/firestore';
-import { AngularFireStorage } from "@angular/fire/storage";
+import { AngularFireStorage } from '@angular/fire/storage';
 import { combineAll, map, mergeMap, switchMap, finalize } from 'rxjs/operators';
 import { combineLatest, Observable, Subscription } from 'rxjs';
 
@@ -36,7 +36,7 @@ export class PorteesService {
 
   // creation d une nouvelle portee
   createNewPortee(newPortee: Portee) {
-    //return this.firestore.collection('portees').add(newPortee);
+    // return this.firestore.collection('portees').add(newPortee);
     return new Promise<Portee> ((resolve, reject) => {
       this.firestore.collection('portees').add({...newPortee}).then(res => {}, err => reject(err));
     });
@@ -48,11 +48,11 @@ export class PorteesService {
   }
 
   addChiotToPortee(portee: Portee, chiot: Chiot){
-    //TODO
+    // TODO
   }
 
   addSeveralChiotToPortee(portee: Portee, chiots: Chiot[]){
-    //todo
+    // TODO
   }
 
 
